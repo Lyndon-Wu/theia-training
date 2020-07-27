@@ -1,6 +1,6 @@
 # Exercise 1: Implement Quick File
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/akosyakov/theia-training/tree/exercise-1)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/Lyndon-Wu/theia-training/tree/exercise-1)
 
 In this exercise, you learn:
 - frontend and backend application lifecycle and contributions;
