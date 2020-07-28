@@ -44,14 +44,26 @@ export class FileListWidget extends ReactWidget {
         - Implement rendering of a file list in `FileListWidget.render`.
         - The model of `FileListWidget` is a current file with a path which a user follows to open this file.
         These variables are represented in code like `FileListWidget.current` and `FileListWidget.path` properties.
+        
         - If a path is not emptry then render `..` as a first element.
         When a user clicks on it the last element of a path should be opened.
         You can do it by calling `FileListWidget.openParent`.
+
         - If a current file has children, i.e. it's a directory, then for each child file render `FileComponent`.
         When a user clicks on a child node the corresponding file should be opened.
         You can do it by calling `FileListWidget.openChild`.
-         */
-        return null;
+        */
+        const children = this.current && this.current.children;
+        return <React.Fragment>
+            {
+                this.path.length > 0 && <div onClick={this.openParent}>..</div>
+            }
+            {
+                children && children.map((file, index) =>
+                    <FileComponent key={index} file={file} labelProvider={this.labelProvider} onOpenFile={this.openChild} />
+                )
+            }
+        </React.Fragment>
     }
 
     protected readonly openParent = (e: React.MouseEvent<HTMLDivElement>) => {
