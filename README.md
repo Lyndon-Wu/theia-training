@@ -1,6 +1,6 @@
 # Exercise 3: Implement File List View JSON-RPC Service
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/akosyakov/theia-training/tree/exercise-3)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/Lyndon-Wu/theia-training/tree/exercise-3)
 
 In this exercise, you learn:
 - how to add a new JSON-RPC service;
