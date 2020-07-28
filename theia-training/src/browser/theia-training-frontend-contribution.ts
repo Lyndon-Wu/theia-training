@@ -1,13 +1,12 @@
 import { injectable, inject } from "inversify";
 import URI from "@theia/core/lib/common/uri";
-import { CommandContribution, CommandRegistry, MenuContribution, MenuModelRegistry } from "@theia/core/lib/common";
 
+import { CommandContribution, CommandRegistry } from "@theia/core/lib/common";
+import { MenuContribution, MenuModelRegistry } from "@theia/core/lib/common";
 import { CommonMenus, StatusBarEntry, StatusBar } from "@theia/core/lib/browser";
 import { KeybindingContribution, KeybindingRegistry } from "@theia/core/lib/browser";
-import {  QuickOpenModel, QuickOpenItem, QuickOpenOptions, QuickOpenMode } from "@theia/core/lib/browser";
-import { QuickOpenHandler, QuickOpenService, QuickOpenContribution, QuickOpenHandlerRegistry } from "@theia/core/lib/browser";
-import { open, FrontendApplicationContribution, Endpoint, OpenerService } from "@theia/core/lib/browser";
-
+import { QuickOpenModel, QuickOpenItem, QuickOpenOptions, QuickOpenMode, QuickOpenHandler, QuickOpenService, QuickOpenContribution, QuickOpenHandlerRegistry } from "@theia/core/lib/browser";
+import { open, OpenerService, FrontendApplicationContribution, Endpoint } from "@theia/core/lib/browser";
 import { WorkspaceService } from "@theia/workspace/lib/browser";
 
 
@@ -71,8 +70,7 @@ export class TheiaTrainingFrontendContribution implements QuickOpenHandler, Comm
         // Use `KeybindingRegistry.registerKeybinding` to register a new keybinding.
         registry.registerKeybinding({
             command: OpenQuickFileCommand.id,
-            context: 'Keybinding',
-            keybinding: "ctrlcmd+k"
+            keybinding: "ctrl+alt+k"
         });
     }
 
